@@ -1,0 +1,11 @@
+{
+  "app.welcome": "Bienvenido {name}!",
+
+  "menu.home": "Inicio",
+  "menu.explore": "Explorar",
+  "menu.profile": "Perfil",
+
+  "explore.title": "Explorar",
+
+  "profile.title": "Perfil"
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Grid from './Grid';
+import { FormattedMessage } from 'react-intl';
 
 const Profile = () => {
 	return (
@@ -8,12 +9,17 @@ const Profile = () => {
 			<Header />
 
 			<div className="main">
-				<h1 className="titulo">Perfil</h1>
+				<h1 className="titulo">
+					<FormattedMessage
+						id="profile.title"
+						defaultMessage="Profile"
+					/>
+				</h1>
 
 				<Grid />
 			</div>
 		</div>
 	);
 }
- 
+
 export default Profile;

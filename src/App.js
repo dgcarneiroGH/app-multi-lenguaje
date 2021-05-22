@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Grid from './components/Grid';
 import './styles.css';
+import { FormattedMessage, FormattedDate } from 'react-intl';
 
 const App = () => {
 	return (
@@ -9,13 +10,28 @@ const App = () => {
 			<Header />
 
 			<div className="main">
-				<h1 className="titulo">Bienvenido, Diego</h1>
-				<p className="subtitulo">Viernes 23 de Abril de 2020</p>
-				
+				<h1 className="titulo">
+					<FormattedMessage
+						id="app.welcome"
+						defaultMessage="Welcome Diego!"
+						values={
+							{
+								name: 'Diego'
+							}
+						} />
+				</h1>
+				<p className="subtitulo"><FormattedDate
+					value={Date.now()}
+					year="numeric"
+					month="long"
+					day="numeric"
+					weekday="long"
+				/></p>
+
 				<Grid />
 			</div>
 		</div>
 	);
 }
- 
+
 export default App;
